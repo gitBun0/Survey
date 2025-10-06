@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>African Culinary & Fitness Survey</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-container">
+    <header>
+      <h1><a href="Index.html" class="survey-link">African Culinary & Fitness Survey</a></h1>
+      <p>
+        We value your input! Please complete this survey to help us improve healthy versions of traditional African dishes and understand your fitness and cooking habits.
+      </p>
+    </header>
+
+    <main>
+      <!-- Form connected to Formspree -->
+      <form action="https://formspree.io/f/xnngzbyl" method="POST">
+        
+        <!-- Consent Clause -->
+        <div class="form-section">
+          <h2>Confidentiality Agreement</h2>
+          <p>
+            By continuing with this survey, you agree to a non-disclosure agreement (NDA). You are not permitted to share, use, or discuss any concepts, ideas, or information about the AI Fitness Food App mentioned here. This information is the intellectual property of the creators. Anyone assisting with the app must sign an NDA and a contract outlining their contributions and compensation.
+          </p>
+          <label><input type="checkbox" name="nda_agreement" value="Agreed" required> I have read and agree to this confidentiality clause.</label>
+        </div>
+
+        <!-- Section 1: About You -->
+        <div class="form-section">
+          <h2>Section 1: About You</h2>
+          <label for="age">1. Age</label>
+          <input type="number" id="age" name="age" placeholder="Your age" required>
+
+          <label>2. Gender</label>
+          <div class="radio-group">
+            <label><input type="radio" name="gender" value="Male" required> Male</label>
+            <label><input type="radio" name="gender" value="Female"> Female</label>
+            <label><input type="radio" name="gender" value="Other"> Other</label>
+            <label><input type="radio" name="gender" value="Prefer not to say"> Prefer not to say</label>
+          </div>
+
+          <label for="country">3. Country/Region of Residence</label>
+          <input type="text" id="country" name="country" placeholder="Your country or region" required>
+
+          <label for="birthplace">4. Place of Birth</label>
+          <input type="text" id="birthplace" name="birthplace" placeholder="City or region of birth">
+        </div>
+
+        <!-- Section 2: Food Preferences -->
+        <div class="form-section">
+          <h2>Section 2: Food Preferences</h2>
+
+          <label>1. Which traditional African dishes do you enjoy the most? (Select all that apply)</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="dishes[]" value="Jollof rice"> Jollof rice</label>
+            <label><input type="checkbox" name="dishes[]" value="Egusi soup"> Egusi soup</label>
+            <label><input type="checkbox" name="dishes[]" value="Suya"> Suya</label>
+            <label><input type="checkbox" name="dishes[]" value="Fufu"> Fufu</label>
+            <label><input type="checkbox" name="dishes[]" value="Piri-piri chicken"> Piri-piri chicken</label>
+            <label><input type="checkbox" name="dishes[]" value="Other"> Other: <input type="text" name="dishes_other" placeholder="Specify"></label>
+          </div>
+
+          <label>2. Which flavors are most important to you in your favorite dishes? (Select all that apply)</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="flavors[]" value="Spicy"> Spicy</label>
+            <label><input type="checkbox" name="flavors[]" value="Savory"> Savory</label>
+            <label><input type="checkbox" name="flavors[]" value="Sweet"> Sweet</label>
+            <label><input type="checkbox" name="flavors[]" value="Sour"> Sour</label>
+            <label><input type="checkbox" name="flavors[]" value="Smoky"> Smoky</label>
+            <label><input type="checkbox" name="flavors[]" value="Nutty"> Nutty</label>
+            <label><input type="checkbox" name="flavors[]" value="Other"> Other: <input type="text" name="flavors_other" placeholder="Specify"></label>
+          </div>
+
+          <label>3. How important is it for you that a dish tastes authentic and preserves its flavour?</label>
+          <div class="radio-group">
+            <label><input type="radio" name="authenticity" value="Not important" required> Not important</label>
+            <label><input type="radio" name="authenticity" value="Slightly important"> Slightly important</label>
+            <label><input type="radio" name="authenticity" value="Moderately important"> Moderately important</label>
+            <label><input type="radio" name="authenticity" value="Very important"> Very important</label>
+            <label><input type="radio" name="authenticity" value="Extremely important"> Extremely important</label>
+          </div>
+        </div>
+
+        <!-- Section 3: Health & Dietary Considerations -->
+        <div class="form-section">
+          <h2>Section 3: Health & Dietary Considerations</h2>
+
+          <label>1. Are there traditional dishes you avoid due to health reasons or your commitment to a healthy lifestyle?</label>
+          <div class="radio-group">
+            <label><input type="radio" name="avoid_dishes" value="Yes" required> Yes</label>
+            <label><input type="radio" name="avoid_dishes" value="No"> No</label>
+          </div>
+
+          <label>If yes, please specify which dishes and why:</label>
+          <textarea name="avoid_dishes_details" rows="3" placeholder="Specify here..."></textarea>
+
+          <label>2. What health concerns influence your food choices? (Select all that apply)</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="health_concerns[]" value="High blood pressure"> High blood pressure</label>
+            <label><input type="checkbox" name="health_concerns[]" value="Diabetes"> Diabetes</label>
+            <label><input type="checkbox" name="health_concerns[]" value="High cholesterol"> High cholesterol</label>
+            <label><input type="checkbox" name="health_concerns[]" value="Weight management"> Weight management</label>
+            <label><input type="checkbox" name="health_concerns[]" value="Heart disease"> Heart disease</label>
+            <label><input type="checkbox" name="health_concerns[]" value="Other"> Other: <input type="text" name="health_concerns_other" placeholder="Specify"></label>
+          </div>
+
+          <label>3. Which ingredients do you usually try to avoid for health reasons? (Select all that apply)</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="avoid_ingredients[]" value="Salt"> Salt</label>
+            <label><input type="checkbox" name="avoid_ingredients[]" value="Oil"> Oil</label>
+            <label><input type="checkbox" name="avoid_ingredients[]" value="Butter"> Butter</label>
+            <label><input type="checkbox" name="avoid_ingredients[]" value="Sugar"> Sugar</label>
+            <label><input type="checkbox" name="avoid_ingredients[]" value="Red meat"> Red meat</label>
+            <label><input type="checkbox" name="avoid_ingredients[]" value="Processed foods"> Processed foods</label>
+            <label><input type="checkbox" name="avoid_ingredients[]" value="Other"> Other: <input type="text" name="avoid_ingredients_other" placeholder="Specify"></label>
+          </div>
+        </div>
+
+        <!-- Section 4: Cooking Habits -->
+        <div class="form-section">
+          <h2>Section 4: Cooking Habits</h2>
+
+          <label>1. How often do you cook traditional dishes at home?</label>
+          <div class="radio-group">
+            <label><input type="radio" name="cooking_frequency" value="Daily" required> Daily</label>
+            <label><input type="radio" name="cooking_frequency" value="Several times a week"> Several times a week</label>
+            <label><input type="radio" name="cooking_frequency" value="Once a week"> Once a week</label>
+            <label><input type="radio" name="cooking_frequency" value="Rarely"> Rarely</label>
+            <label><input type="radio" name="cooking_frequency" value="Never"> Never</label>
+          </div>
+
+          <label>2. Which cooking methods do you prefer? (Select all that apply)</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="cooking_methods[]" value="Boiling"> Boiling</label>
+            <label><input type="checkbox" name="cooking_methods[]" value="Steaming"> Steaming</label>
+            <label><input type="checkbox" name="cooking_methods[]" value="Baking"> Baking</label>
+            <label><input type="checkbox" name="cooking_methods[]" value="Grilling"> Grilling</label>
+            <label><input type="checkbox" name="cooking_methods[]" value="Frying"> Frying</label>
+            <label><input type="checkbox" name="cooking_methods[]" value="Other"> Other: <input type="text" name="cooking_methods_other" placeholder="Specify"></label>
+          </div>
+
+          <label>3. What is the biggest challenge when trying to cook healthier versions of traditional dishes?</label>
+          <div class="radio-group">
+            <label><input type="radio" name="challenge" value="Maintaining flavor" required> Maintaining flavor</label>
+            <label><input type="radio" name="challenge" value="Finding healthier ingredients"> Finding healthier ingredients</label>
+            <label><input type="radio" name="challenge" value="Cooking time"> Cooking time</label>
+            <label><input type="radio" name="challenge" value="Cost"> Cost</label>
+            <label><input type="radio" name="challenge" value="Other"> Other</label>
+          </div>
+        </div>
+
+        <!-- Section 5: Openness to Healthier Versions -->
+        <div class="form-section">
+          <h2>Section 5: Openness to Healthier Versions</h2>
+
+          <label>1. Would you be willing to try a healthier version of your favorite dishes if it retained its original flavour?</label>
+          <div class="radio-group">
+            <label><input type="radio" name="willingness" value="Yes" required> Yes</label>
+            <label><input type="radio" name="willingness" value="No"> No</label>
+            <label><input type="radio" name="willingness" value="Maybe"> Maybe</label>
+          </div>
+
+          <label>2. Which substitutions would you be most open to? (Select all that apply)</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="substitutions[]" value="Less oil/fat"> Using less oil/fat</label>
+            <label><input type="checkbox" name="substitutions[]" value="Plant-based proteins"> Using plant-based proteins</label>
+            <label><input type="checkbox" name="substitutions[]" value="Baking instead of frying"> Baking instead of frying</label>
+            <label><input type="checkbox" name="substitutions[]" value="Low-sodium ingredients"> Using low-sodium ingredients</label>
+            <label><input type="checkbox" name="substitutions[]" value="Reducing sugar"> Reducing sugar</label>
+            <label><input type="checkbox" name="substitutions[]" value="Other"> Other: <input type="text" name="substitutions_other" placeholder="Specify"></label>
+          </div>
+
+          <label>3. If a dish is slightly less authentic but much healthier, would you still eat it?</label>
+          <div class="radio-group">
+            <label><input type="radio" name="less_authentic" value="Definitely not" required> Definitely not</label>
+            <label><input type="radio" name="less_authentic" value="Probably not"> Probably not</label>
+            <label><input type="radio" name="less_authentic" value="Neutral"> Neutral</label>
+            <label><input type="radio" name="less_authentic" value="Probably yes"> Probably yes</label>
+            <label><input type="radio" name="less_authentic" value="Definitely yes"> Definitely yes</label>
+          </div>
+
+          <label>4. Which matters more to you?</label>
+          <div class="radio-group">
+            <label><input type="radio" name="priority" value="Flavour" required> Flavour</label>
+            <label><input type="radio" name="priority" value="Health"> Health</label>
+            <label><input type="radio" name="priority" value="Both"> Both equally</label>
+          </div>
+        </div>
+
+        <!-- Section 6: Your Fitness Life -->
+        <div class="form-section">
+          <h2>Section 6: Your Fitness Life</h2>
+
+          <label>1. What are your fitness goals? (Select up to 2)</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="fitness_goals[]" value="Lose weight"> To lose weight</label>
+            <label><input type="checkbox" name="fitness_goals[]" value="Add muscle mass"> To add muscle mass</label>
+            <label><input type="checkbox" name="fitness_goals[]" value="Tone body"> To tone your body</label>
+            <label><input type="checkbox" name="fitness_goals[]" value="Improve endurance"> Improve endurance</label>
+            <label><input type="checkbox" name="fitness_goals[]" value="Improve overall health"> Improve overall health</label>
+            <label><input type="checkbox" name="fitness_goals[]" value="Improve flexibility"> Improve flexibility/mobility</label>
+            <label><input type="checkbox" name="fitness_goals[]" value="Train for sport"> Train for a specific sport or event</label>
+          </div>
+
+          <label>2. How many times do you exercise weekly?</label>
+          <div class="radio-group">
+            <label><input type="radio" name="exercise_frequency" value="1-2" required> 1–2</label>
+            <label><input type="radio" name="exercise_frequency" value="3-4"> 3–4</label>
+            <label><input type="radio" name="exercise_frequency" value="5+"> 5+</label>
+          </div>
+        </div>
+
+        <!-- Section 7: How We Can Help You -->
+        <div class="form-section">
+          <h2>Section 7: How We Can Help You</h2>
+
+          <label>1. Would you be open to meal prepping if you had an AI voice assistant guiding you?</label>
+          <div class="radio-group">
+            <label><input type="radio" name="ai_mealprep" value="Yes" required> Yes</label>
+            <label><input type="radio" name="ai_mealprep" value="No"> No</label>
+          </div>
+
+          <label>2. How helpful would an AI voice assistant be if it could understand your country’s English Pidgin?</label>
+          <select name="ai_helpfulness" required>
+            <option value="">Select a rating</option>
+            <option value="1">1 - Not helpful at all</option>
+            <option value="2">2 - Minimally helpful</option>
+            <option value="3">3 - Moderately helpful</option>
+            <option value="4">4 - Helpful</option>
+            <option value="5">5 - Very helpful</option>
+          </select>
+
+          <label>3. How much time do you have for cooking on a weekly basis?</label>
+          <div class="radio-group">
+            <label><input type="radio" name="cooking_time" value="Less than 1 hour"> Less than 1 hour per week</label>
+            <label><input type="radio" name="cooking_time" value="1-3 hours"> 1–3 hours</label>
+            <label><input type="radio" name="cooking_time" value="4-6 hours"> 4–6 hours</label>
+            <label><input type="radio" name="cooking_time" value="7-10 hours"> 7–10 hours</label>
+            <label><input type="radio" name="cooking_time" value="More than 10 hours"> More than 10 hours per week</label>
+          </div>
+
+          <label>4. How often do you cook meals at home?</label>
+          <div class="radio-group">
+            <label><input type="radio" name="home_cooking_frequency" value="Never"> Never</label>
+            <label><input type="radio" name="home_cooking_frequency" value="1-2 times"> 1–2 times per week</label>
+            <label><input type="radio" name="home_cooking_frequency" value="3-5 times"> 3–5 times per week</label>
+            <label><input type="radio" name="home_cooking_frequency" value="Daily"> Daily</label>
+          </div>
+
+           <label>5. What foods would you really like to eat from your country that you haven’t been able to find a tasty alternative to?</label>
+          <textarea name="missed_foods" rows="4" placeholder="List the dishes or foods here..."></textarea>
+        </div>
+
+        <!-- Section 8: Open Feedback -->
+        <div class="form-section">
+          <h2>Section 8: Open Feedback</h2>
+          <label>1. What tips or ideas do you have for making traditional African dishes healthier without compromising flavor?</label>
+          <textarea name="open_feedback" rows="5" placeholder="Your feedback here..."></textarea>
+        </div>
+
+        <!-- Submit -->
+        <div class="form-section">
+          <button type="submit">Submit Survey</button>
+        </div>
+      </form>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #FFB347, #FFCC33);
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    margin: 0;
+  }
+  
+  .page-container {
+    background-color: #fff8f0;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    max-width: 800px;
+    width: 100%;
+    padding: 2.5rem;
+    border-top: 8px solid #D35400;
+  }
+  
+  header {
+    border-bottom: 2px dotted #D35400;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+  }
+  
+  header h1 {
+    font-size: 1.8rem;
+    color: #6E2C00;
+    margin-bottom: 0.5rem;
+  }
+  
+  header p {
+    color: #784212;
+    font-size: 1rem;
+  }
+  
+  h2 {
+    color: #6E2C00;
+    margin-bottom: 1rem;
+  }
+  
+  label {
+    display: block;
+    font-weight: 500;
+    color: #6E2C00;
+    margin-bottom: 0.5rem;
+  }
+  
+  input[type="text"], input[type="email"], input[type="number"], textarea {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #D35400;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+  }
+  
+  input:focus, textarea:focus {
+    border-color: #FF5733;
+    box-shadow: 0 0 0 2px rgba(255,87,51,0.2);
+    outline: none;
+  }
+  
+  .radio-group, .checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .radio-group label, .checkbox-group label {
+    font-weight: normal;
+    color: #784212;
+  }
+  
+  button {
+    background-color: #D35400;
+    color: white;
+    border: none;
+    padding: 0.9rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  button:hover {
+    background-color: #FF5733;
+  }
+  
+  @media (max-width: 600px) {
+    .page-container {
+      padding: 1.5rem;
+    }
+  }
